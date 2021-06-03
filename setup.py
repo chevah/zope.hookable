@@ -79,13 +79,15 @@ if is_pypy_or_jython:
     ext_modules = {}
 else:
     ext_modules = codeoptimization
+    # Chevah is not using code optimization for easy deployment,
+    ext_modules = {}
 
 TESTS_REQUIRE = [
     'zope.testing',
 ]
 
 setup(name='zope.hookable',
-      version='5.0.1',
+      version='5.0.1+chevah.2',
       url='http://github.com/zopefoundation/zope.hookable',
       license='ZPL 2.1',
       description='Zope hookable',
