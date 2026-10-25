@@ -73,5 +73,4 @@ if is_pypy_or_jython:
 else:
     ext_modules = codeoptimization
 
-setup(ext_modules=ext_modules,
-      cmdclass={'build_ext': optional_build_ext})
+setup()
